@@ -8,5 +8,5 @@
 #if defined(LEVEL_INFO)
 				const auto lrange = LvlInfoMap.equal_range(val);
 				for (auto it = lrange.first; it != lrange.second; ++it)
-					ChatPacket(CHAT_TYPE_BIG_NOTICE, it->second.c_str()); // or LC_TEXT
+					ChatPacket(it->second.second, it->second.first.c_str()); // or LC_TEXT
 #endif
